@@ -75,6 +75,7 @@ export PLATFORM_SHORT_ARCH
 # Add the NDK toolchain to the PATH, needed both for contribs and for building
 # stub libraries
 NDK_TOOLCHAIN_PATH=${ANDROID_NDK}/toolchains/${PATH_HOST}-${GCCVER}/prebuilt/`uname|tr A-Z a-z`-x86/bin
+CHOST=${NDK_TOOLCHAIN_PATH}/${TARGET_TUPLE}
 export PATH=${NDK_TOOLCHAIN_PATH}:${PATH}
 
 # 1/ libvlc, libvlccore and its plugins
@@ -185,6 +186,7 @@ MAKEFLAGS=-j`nproc`
 fi
 
 echo "EXTRA_CFLAGS= -g ${EXTRA_CFLAGS}" >> config.mak
+echo "CHOST= ${CHOST}" >> config.mak
 export VLC_EXTRA_CFLAGS="${EXTRA_CFLAGS}"
 
 make fetch
