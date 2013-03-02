@@ -37,6 +37,11 @@ LOCAL_SRC_FILES += wchar/wmemcpy.c
 LOCAL_SRC_FILES += wchar/wmemmove.c
 LOCAL_SRC_FILES += wchar/wmemset.c
 
+LOCAL_SRC_FILES += jni_helper.c
+LOCAL_SRC_FILES += libvlcapi_misc.c
+LOCAL_SRC_FILES += libvlcapi_log.c
+LOCAL_SRC_FILES += libvlcapi_instance.c
+LOCAL_SRC_FILES += libvlcapi_media_player.c
 
 LOCAL_C_INCLUDES := $(VLC_SRC_DIR)/include
 
