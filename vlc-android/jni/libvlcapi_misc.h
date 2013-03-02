@@ -20,4 +20,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
  *****************************************************************************/
 
+#ifndef JNIVLCAPI_MISC_H
+#define JNIVLCAPI_MISC_H
+
 void libVlcApi_throwLibVlcException(JNIEnv *env, const char *msg);
+
+#endif//JNIVLCAPI_MISC_H

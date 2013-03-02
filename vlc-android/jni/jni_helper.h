@@ -20,6 +20,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
  *****************************************************************************/
 
+#ifndef JNI_HELPER_H
+#define JNI_HELPER_H
+
 #include <stddef.h>
 #include <string.h>
 
@@ -66,3 +69,5 @@ inline static int jnihelper_string_array_is_empty(
             || p_string_array->size <= 0 || p_string_array->jstring_array
             || p_string_array->utf_chars_array;
 }
+
+#endif//JNI_HELPER_H
